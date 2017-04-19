@@ -8,9 +8,8 @@ Load this library into your module projects to enable controllable random number
 
 Before generating a random number, you will need to set an upper and lower boundry for your random number range. Default is 0-100, you may modify this in config.h.
 
-
+Get current upper boundry.
 ```c
-// Get the current upper boundry.
 int i = dc_random_get_lower_bound()
 ```
 
