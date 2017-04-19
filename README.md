@@ -13,28 +13,26 @@ Load this library into your module projects to enable controllable random number
 
 Get current lower boundry for number generation.
 ```c
-int i = dc_random_get_lower_bound();
+int i = getlocalvar(DC_RANDOM_KEY_LOWER);
 ```
 
 Get current upper boundry.
 ```c
-int i = dc_random_get_upper_bound();
+int i = getlocalvar(DC_RANDOM_KEY_UPPER);
 ```
 
-Set a new upper boundry. Returns 1 if successful.
+Set a new lower boundry.
 ```c
 int i = {int};
-int result;
 
-result = dc_random_set_upper_bound(i);
+setlocalvar(DC_RANDOM_KEY_LOWER, i);
 ```
 
-Set a new lower boundry. Returns 1 if successful.
+Set a new upper boundry.
 ```c
 int i = {int};
-int result;
 
-result = dc_random_set_lower_bound(i);
+setlocalvar(DC_RANDOM_KEY_UPPER, i);
 ```
 
 Generate a random integer between lower and upper boundry. If you do not set upper and lower boundries, default values will be used.
