@@ -37,7 +37,7 @@ int result;
 result = dc_random_set_lower_bound(i);
 ```
 
-Generate a random integer between lower and upper boundry.
+Generate a random integer between lower and upper boundry. If you do not set upper and lower boundries, default values will be used.
 ```c
 int i = dc_random_int();
 ```
