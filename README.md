@@ -39,5 +39,5 @@ result = dc_random_set_lower_bound(i);
 
 Generate a random integer between lower and upper boundry.
 ```c
-int i = dc_random_int()
+int i = dc_random_int();
 ```
