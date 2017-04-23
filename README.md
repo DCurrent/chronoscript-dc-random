@@ -5,8 +5,8 @@ Load this library into your module projects to enable controllable random number
 
 ## Installation
 
-1. Download and unzip dc_vars folder into your data/scripts folder.
-1. #include data/scripts/d20/main.c into any other script you would like to add random number functionality to.
+1. Download and unzip dc_d20 folder into your data/scripts folder.
+1. #include data/scripts/dc_d20/main.c into any other script you would like to add random number functionality to.
 1. Open config.h to modify default values used in the library.
 
 ## Use Cases
