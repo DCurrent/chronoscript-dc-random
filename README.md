@@ -3,11 +3,18 @@ Generate random values in OpenBOR script.
 
 Load this library into your module projects to enable controllable random number generation. 
 
+## Dependencies
+
+None
+
 ## Installation
 
-1. Download and unzip dc_d20 folder into your data/scripts folder.
-1. #include data/scripts/dc_d20/main.c into any other script you would like to add random number functionality to.
-1. Open config.h to modify default values used in the library.
+1. Install any listed dependencies. See an individual dependency's readme for specific instructions.
+1. Download and unzip the [latest release](../../releases).
+1. Place the *dc_d20* folder into your *data/scripts* folder.
+1. Add ```#include data/scripts/dc_d20/main.c``` into any other script you would like to add this library’s functionality to.
+1. Open *config.h* to modify default values used in the library.
+
 
 ## Use Cases
 
