@@ -5,10 +5,19 @@
 // upper and lower boundaries.
 int dc_d20_int()
 {
-    int     result;
-    int     lower_bound,
-            upper_bound,
-            mod;
+    int result;
+
+    result = dc_d20_generate_random_int();
+
+    return result;
+}
+
+int dc_d20_generate_random_int()
+{
+    int result;
+    int lower_bound;
+    int upper_bound;
+    int mod;
 
     // Get upper and lower bound settings.
     lower_bound = getlocalvar(DC_D20_KEY_LOWER);
