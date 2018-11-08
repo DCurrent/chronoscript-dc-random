@@ -15,34 +15,57 @@ None
 1. Add ```#include data/scripts/dc_d20/main.c``` into any other script you would like to add this library’s functionality to.
 1. Open *config.h* to modify default values used in the library.
 
-
 ## Use Cases
+
+Generate a random integer between lower and upper boundry. If you do not set upper and lower boundries, default values will be used.
+```c
+int i = dc_d20_int();
+```
+
+### Configuration
+
+#### Range
 
 Get current lower boundry for number generation.
 ```c
-int i = getlocalvar(DC_d20_KEY_LOWER);
+int i = dc_d20_get_range_lower(DC_d20_KEY_LOWER);
 ```
 
 Get current upper boundry.
 ```c
-int i = getlocalvar(DC_d20_KEY_UPPER);
+int i = dc_d20_get_range_upper(DC_d20_KEY_UPPER);
 ```
 
 Set a new lower boundry.
 ```c
 int i = {int};
 
-setlocalvar(DC_d20_KEY_LOWER, i);
+dc_d20_set_range_lower(i);
 ```
 
 Set a new upper boundry.
 ```c
 int i = {int};
 
-setlocalvar(DC_d20_KEY_UPPER, i);
+dc_d20_set_range_upper(i);
 ```
 
-Generate a random integer between lower and upper boundry. If you do not set upper and lower boundries, default values will be used.
+#### Instance
+
+Instancing allows the library to keep several unique configurations at once in a given function. That way you won't need to clog up your functions constantly adjusting the library’s properties back and forth when you need more than one configuration. Just set up your desired configurations one time and then switch between instances as needed.
+
+By default, the active instance is 0. To create more, switch to a new active instance with an ID of your choice, and adjust the other configuration settings as preferred. Your new instance is ready to use. 
+
+Get active instance ID.
 ```c
-int i = dc_d20_int();
+int i = dc_d20_get_instance();
 ```
+
+Set (swicth to) active instance.
+```c
+int i = {int};
+
+dc_d20_set_instance(i);
+```
+
+
