@@ -9,7 +9,7 @@
 #define DC_D20_DEFAULT_RANGE_UPPER	100
 
 // Variable keys.
-#define DC_D20_VER_KEY_INSTANCE		"dcd20_0"
+#define DC_D20_VAR_KEY_INSTANCE		"dcd20_0"
 
 #define DC_D20_VAR_KEY_LOCKED_LOWER	"dcd20_1"
 #define DC_D20_VAR_KEY_LOCKED_UPPER	"dcd20_2"

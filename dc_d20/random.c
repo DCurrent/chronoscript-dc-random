@@ -3,6 +3,54 @@
 
 #import    "data/scripts/dc_d20/config.c"
 
+// Lowest number random generator can return.
+void dc_d20_set_range_lower(int value)
+{
+	int instance;
+	instance = dc_d20_get_instance();
+
+	setlocalvar(instance + DC_D20_VAR_KEY_RANGE_LOWER, value);
+}
+
+int dc_d20_get_range_lower()
+{
+	int instance;
+	instance = dc_d20_get_instance();
+
+	void result = getlocalvar(instance + DC_D20_VAR_KEY_RANGE_LOWER);
+
+	if (typeof(result) == openborconstant("VT_EMPTY"))
+	{
+		result = DC_D20_DEFAULT_RANGE_LOWER;
+	}
+
+	return result;
+}
+
+// Highest number random generator can return.
+void dc_d20_set_range_upper(int value)
+{
+	int instance;
+	instance = dc_d20_get_instance();
+
+	setlocalvar(instance + DC_D20_VAR_KEY_RANGE_UPPER, value);
+}
+
+int dc_d20_get_range_upper()
+{
+	int instance;
+	instance = dc_d20_get_instance();
+
+	void result = getlocalvar(instance + DC_D20_VAR_KEY_RANGE_UPPER);
+
+	if (typeof(result) == openborconstant("VT_EMPTY"))
+	{
+		result = DC_D20_DEFAULT_RANGE_UPPER;
+	}
+
+	return result;
+}
+
 // Generate random value between
 // upper and lower boundaries.
 int dc_d20_random_int()
