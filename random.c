@@ -4,14 +4,6 @@
 #import    "data/scripts/dc_d20/config.c"
 
 // Lowest number random generator can return.
-void dc_d20_set_range_lower(int value)
-{
-	int instance;
-	instance = dc_d20_get_instance();
-
-	setlocalvar(instance + DC_D20_VAR_KEY_RANGE_LOWER, value);
-}
-
 int dc_d20_get_range_lower()
 {
 	int instance;
@@ -27,15 +19,15 @@ int dc_d20_get_range_lower()
 	return result;
 }
 
-// Highest number random generator can return.
-void dc_d20_set_range_upper(int value)
+void dc_d20_set_range_lower(int value)
 {
 	int instance;
 	instance = dc_d20_get_instance();
 
-	setlocalvar(instance + DC_D20_VAR_KEY_RANGE_UPPER, value);
+	setlocalvar(instance + DC_D20_VAR_KEY_RANGE_LOWER, value);
 }
 
+// Highest number random generator can return.
 int dc_d20_get_range_upper()
 {
 	int instance;
@@ -49,6 +41,14 @@ int dc_d20_get_range_upper()
 	}
 
 	return result;
+}
+
+void dc_d20_set_range_upper(int value)
+{
+	int instance;
+	instance = dc_d20_get_instance();
+
+	setlocalvar(instance + DC_D20_VAR_KEY_RANGE_UPPER, value);
 }
 
 // Generate random value between
