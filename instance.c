@@ -1,6 +1,5 @@
 #include "data/scripts/dc_d20/config.h"
 
-
 // Which instance is in use?
 int dc_d20_get_instance()
 {
