@@ -1,8 +1,6 @@
 // Package Files
 #include    "data/scripts/dc_d20/config.h"
 
-#import    "data/scripts/dc_d20/instance.c"
-
 // Lowest number random generator can return.
 int dc_d20_get_range_lower()
 {
