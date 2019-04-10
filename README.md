@@ -1,4 +1,4 @@
-# D20
+# DC D20
 Generate random values in OpenBOR script.
 
 Load this library into your module projects to enable controllable random number generation. 
