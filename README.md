@@ -50,22 +50,4 @@ int i = {int};
 dc_d20_set_range_upper(i);
 ```
 
-#### Instance
-
-Instancing allows the library to keep several unique configurations at once in a given function. That way you won't need to clog up your functions constantly adjusting the library’s properties back and forth when you need more than one configuration. Just set up your desired configurations one time and then switch between instances as needed.
-
-By default, the active instance is 0. To create more, switch to a new active instance with an ID of your choice, and adjust the other configuration settings as preferred. Your new instance is ready to use. 
-
-Get active instance ID.
-```c
-int i = dc_d20_get_instance();
-```
-
-Set (swicth to) active instance.
-```c
-int i = {int};
-
-dc_d20_set_instance(i);
-```
-
 
