@@ -5,7 +5,7 @@ Load this library into your module projects to enable controllable random number
 
 ## Dependencies
 
-None
+[DC Instance](https://github.com/DCurrent/openbor-script-instance)
 
 ## Installation
 
