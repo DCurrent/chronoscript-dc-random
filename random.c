@@ -2,51 +2,51 @@
 #include    "data/scripts/dc_d20/config.h"
 
 // Lowest number random generator can return.
-int dc_d20_get_range_lower()
+int dc_d20_get_range_min()
 {
 	int instance;
 	instance = dc_d20_get_instance();
 
-	void result = getlocalvar(instance + DC_D20_VAR_KEY_RANGE_LOWER);
+	void result = getlocalvar(instance + DC_D20_MEMBER_RANGE_MIN);
 
 	if (typeof(result) == openborconstant("VT_EMPTY"))
 	{
-		result = DC_D20_DEFAULT_RANGE_LOWER;
+		result = DC_D20_DEFAULT_RANGE_MIN;
 	}
 
 	return result;
 }
 
-void dc_d20_set_range_lower(int value)
+void dc_d20_set_range_min(int value)
 {
 	int instance;
 	instance = dc_d20_get_instance();
 
-	setlocalvar(instance + DC_D20_VAR_KEY_RANGE_LOWER, value);
+	setlocalvar(instance + DC_D20_MEMBER_RANGE_MIN, value);
 }
 
 // Highest number random generator can return.
-int dc_d20_get_range_upper()
+int dc_d20_get_range_max()
 {
 	int instance;
 	instance = dc_d20_get_instance();
 
-	void result = getlocalvar(instance + DC_D20_VAR_KEY_RANGE_UPPER);
+	void result = getlocalvar(instance + DC_D20_MEMBER_RANGE_MAX);
 
 	if (typeof(result) == openborconstant("VT_EMPTY"))
 	{
-		result = DC_D20_DEFAULT_RANGE_UPPER;
+		result = DC_D20_DEFAULT_RANGE_MAX;
 	}
 
 	return result;
 }
 
-void dc_d20_set_range_upper(int value)
+void dc_d20_set_range_max(int value)
 {
 	int instance;
 	instance = dc_d20_get_instance();
 
-	setlocalvar(instance + DC_D20_VAR_KEY_RANGE_UPPER, value);
+	setlocalvar(instance + DC_D20_MEMBER_RANGE_MAX, value);
 }
 
 // Generate random value between
@@ -68,8 +68,8 @@ int dc_d20_generate_random_int()
     int mod;
 
     // Get upper and lower bound settings.
-    lower_bound = dc_d20_get_range_lower();
-    upper_bound = dc_d20_get_range_upper();
+    lower_bound = dc_d20_get_range_min();
+    upper_bound = dc_d20_get_range_max();
 
     // OpenBOR's random generator is a bit odd,
     // so we'll need to do some math work to get

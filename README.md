@@ -28,26 +28,26 @@ int i = dc_d20_int();
 
 Get current lower boundry for number generation.
 ```c
-int i = dc_d20_get_range_lower();
+int i = dc_d20_get_range_min();
 ```
 
 Get current upper boundry.
 ```c
-int i = dc_d20_get_range_upper();
+int i = dc_d20_get_range_max();
 ```
 
 Set a new lower boundry.
 ```c
 int i = {int};
 
-dc_d20_set_range_lower(i);
+dc_d20_set_range_min(i);
 ```
 
 Set a new upper boundry.
 ```c
 int i = {int};
 
-dc_d20_set_range_upper(i);
+dc_d20_set_range_max(i);
 ```
 
 
